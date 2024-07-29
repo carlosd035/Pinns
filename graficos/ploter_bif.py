@@ -8,15 +8,17 @@ results = np.load("results_bif.npy" , allow_pickle=True).item()
 T_f = results["Time_f"]
 t = results["Time_t"]
 T_plot= t
-p_pred1 = results["PredPressl_1"]/133.33
-p_pred2 = results["PredPressl_2"]/133.33
-p_pred3 = results["PredPressl_3"]/133.33
+
+
+p_pred1 = np.load("p_predicted_vessel1.npy", allow_pickle=True)
+p_pred2 = np.load("p_predicted_vessel2.npy", allow_pickle=True)
+p_pred3 = np.load("p_predicted_vessel3.npy", allow_pickle=True)
 p_test1 = results["TestPress_1"]/133.33
 p_test2 = results["TestPress_2"]/133.33
 p_test3 = results["TestPress_3"]/133.33
-u_pred1 = results["PredVel_1"]
-u_pred2 = results["PredVel_2"]
-u_pred3 = results["PredVel_3"]
+u_pred1 = np.load("U_predicted_vessel1.npy", allow_pickle=True)
+u_pred2 = np.load("U_predicted_vessel2.npy", allow_pickle=True)
+u_pred3 = np.load("U_predicted_vessel3.npy", allow_pickle=True)
 u_test1 = results["TestVel_1"]
 u_test2 = results["TestVel_2"]
 u_test3 = results["TestVel_3"]
